@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shanzhu.hospital.mapper.DoctorUserMapper">
+
+    <update id="updateStar">
+        update doctor_user
+         set d_people = d_people+1,d_star = d_star+#{dStar},d_avg_star=d_star/d_people
+        where d_id = #{dId}
+    </update>
+
+</mapper>
